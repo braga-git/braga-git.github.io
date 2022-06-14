@@ -48,6 +48,12 @@ header {
         font-weight: bold;
     }
 
+    .profile_url a:hover {
+        color: var(--font_secondary);
+
+        transition-duration: .5s;
+    }
+
 main {
     width: 800px;
 
@@ -90,6 +96,9 @@ main {
         }
 
         .user_nickname {
+            display: flex;
+            column-gap: 5px;
+
             text-decoration: none;
 
             font-size: 16px;
@@ -98,7 +107,9 @@ main {
         }
 
         .user_nickname:hover {
-            text-decoration: underline;
+            color: var(--font_primary);
+
+            transition-duration: .5s;
         }
 
     /* user location */
