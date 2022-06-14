@@ -1,3 +1,12 @@
+:root {
+    --background_primary: #0d1117;
+    --background_secondary: #161B22;
+    --background_details: rgb(48, 54, 61);
+
+    --font_primary:rgb(201, 209, 217);
+    --font_secondary: rgb(139, 148, 158);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,41 +14,60 @@
 }
 
 body {
-    background-color: #0d1117;
+    background-color: var(--background_primary);
     font-family: Arial, Helvetica, sans-serif;
-    color: #C9D1D9;
+    color: var(--font_primary);
 }
 
 header {
-    background-color: #161B22;
+    background-color: var(--background_secondary);
     height: 70px;
 }
 
 .perfil_url {
     padding: 20px 30px 15px 30px;
+
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 .perfil_url a {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: #C9D1D9;
+    color: var(--font_primary);
     
     text-decoration: none;
 }
 
+.perfil_url a:hover {
+    color: var(--font_secondary);
+}
+
+.main_nav {
+
+}
+
+.main_nav a {
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--font_primary);
+
+    padding-right: 20px;
+
+    text-decoration: none;
+}
+
 .perfil_card {
-    width: 250px;
+    width: 300px;
+
     display: flex;
+    align-items: center;
 
     margin: 20px;
-
-
 }
 
 .perfil_pic {
     width: 100px;
     border-radius: 50%;
-    border: 2px solid #40464E;
+    border: 2px solid var(--background_details);
 }
 
 .perfil_infos {
@@ -47,25 +75,14 @@ header {
 }
 
 .user_name {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
 
+    padding-bottom: 5px;
 }
 
 .user_nickname {
-    color: #7A828C;
+    color: var(--font_secondary);
 }
 
-.main_nav {
-    padding: 30px ;
-}
 
-.main_nav a {
-    font-weight: normal;
-    font-size: 14px;
-    color: #C9D1D9;
-
-    padding-right: 20px;
-
-    text-decoration: none;
-}
