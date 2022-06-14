@@ -7,7 +7,10 @@
     --font_secondary: rgb(139, 148, 158);
 
     --link_underline: #F78166;
-    --link_repositorie: #58a6ff;
+    --link_repositorie: #58A6FF;
+
+    --css_color: #563D7C;
+    --html_color: #E34C26;
 }
 
 * {
@@ -73,31 +76,41 @@ main {
         margin-left: 15px;
     }
 
-    .names {
-        margin-bottom: 15px;
-    }
+    /* names */
 
-    .user_name {
-        font-size: 1.5em;
-        font-weight: bold;
+        .names {
+            margin-bottom: 15px;
+        }
 
-        padding-bottom: 2px;
-    }
+        .user_name {
+            font-size: 1.5em;
+            font-weight: bold;
 
-    .user_nickname {
-        font-size: 16px;
-        
-        color: var(--font_secondary);
-    }
+            padding-bottom: 2px;
+        }
 
-    .user_location {
-        display: flex;
-        align-items: center;
-    }
+        .user_nickname {
+            text-decoration: none;
 
-    .user_location i {
-        margin-right: 8px;
-    }
+            font-size: 16px;
+            
+            color: var(--font_secondary);
+        }
+
+        .user_nickname:hover {
+            text-decoration: underline;
+        }
+
+    /* user location */
+
+        .user_location {
+            display: flex;
+            align-items: center;
+        }
+
+        .user_location i {
+            margin-right: 8px;
+        }
 
 /* repositories */
 
@@ -120,6 +133,8 @@ main {
         border-radius: 6px;
 
         padding: 15px;
+
+        position: relative;
     }
 
     .repositorie_card a {
@@ -130,9 +145,63 @@ main {
         color: var(--link_repositorie);
     }
 
-    .repositorie_card p {
+    .repositorie_card a:hover {
+        text-decoration: underline;
+    }
+
+    .repositorie_card > p {
         font-size: 12px;
         color: var(--font_secondary);
 
         margin-top: 10px;
     }
+
+    /* languages */
+
+        .dev_languages {
+            display: flex;
+            column-gap: 15px;
+
+            position: absolute;
+            bottom: 15px;
+        }
+
+    /* html */
+
+        .html {
+            display: flex;
+
+            font-size: 12px;
+            color: var(--font_secondary);
+        }
+
+        .html_color {
+            background-color: var(--html_color);
+            border: 1px solid #d17760be;
+            border-radius: 50%;
+
+            width: 11px;
+            height: 11px;
+
+            margin-right: 5px;
+        }
+
+        /* css */
+
+        .css {
+            display: flex;
+
+            font-size: 12px;
+            color: var(--font_secondary);            
+        }
+
+        .css_color {
+            background-color: var(--css_color);
+            border: 1px solid #b999ec5e;
+            border-radius: 50%;
+
+            width: 11px;
+            height: 11px;
+
+            margin-right: 5px;
+        }
